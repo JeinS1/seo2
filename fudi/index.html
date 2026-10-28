@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fudi — Find your Favorite Recipes</title>
+    <meta name="description" content="Fudi is a recipe app: find your favorite recipes from Italian, Indian, French, Mexican and other cuisines, share your own recipes and get rewarded.">
+    <meta name="keywords" content="recipes, food recipes, cooking, cuisines, recipe app, Fudi">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="preload" href="fonts/lato-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/lato-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Блок: главный экран с шапкой -->
+    <header class="hero">
+        <img class="hero__bg" src="images/hero-1600.webp"
+            srcset="images/hero-800.webp 800w, images/hero-1600.webp 1600w"
+            sizes="100vw" width="1600" height="880" alt="" fetchpriority="high">
+
+        <div class="hero__top container">
+            <a class="logo" href="./">
+                <svg class="logo__img" width="72" height="61" viewBox="0 0 72 61" role="img" aria-label="Fudi">
+                    <g transform="matrix(0.8,0,0,0.7833,11,13)"><path transform="matrix(1,0,0,-1,1,1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#fff" d="M0 0 58-58"/><path transform="matrix(1,0,0,-1,59,1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#fff" d="M0 0-58-58"/></g>
+                    <g transform="matrix(0.5656,-0.56,0.5658,0.5596,1.12,13.2)"><path transform="matrix(1,0,0,-1,9,1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#fff" d="M0 0V-22"/><path transform="matrix(1,0,0,-1,17,1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#fff" d="M0 0V-14C0-18.418-3.582-22-8-22-12.418-22-16-18.418-16-14V0"/></g>
+                    <g transform="matrix(0.5656,0.56,-0.5658,0.56,61.1,0.74)"><path transform="matrix(1,0,0,-1,9,23)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#fff" d="M0 0V0"/><path transform="matrix(1,0,0,-1,17,9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#fff" d="M0 0C0 4.418-3.582 8-8 8-12.418 8-16 4.418-16 0V-6C-16-10.418-12.418-14-8-14-3.582-14 0-10.418 0-6V0Z"/></g>
+                    <g class="logo__letters">
+                        <text x="35" y="23">F</text>
+                        <text x="14.5" y="40">I</text>
+                        <text x="53" y="41">U</text>
+                        <text x="35" y="58">D</text>
+                    </g>
+                </svg>
+            </a>
+            <nav class="nav">
+                <a class="nav__link" href="#login">Log in</a>
+                <a class="nav__link" href="#signup">Sign up</a>
+                <button class="nav__burger" type="button" aria-label="Open menu"><span></span></button>
+            </nav>
+        </div>
+
+        <div class="hero__content container">
+            <h1 class="hero__title"><span class="hero__subtitle">Find your Favorite</span> Recipes</h1>
+            <a class="button" href="#features">Get started</a>
+            <p class="hero__text">Or send us your own recipes and <a href="#signup"><strong>get rewarded</strong></a>!</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- Блок: преимущества -->
+        <section class="features" id="features">
+            <h2 class="visually-hidden">Why Fudi</h2>
+            <div class="features__list container">
+                <article class="feature">
+                    <div class="feature__icon"><img src="images/icon1.svg" width="60" height="60" alt=""></div>
+                    <h3 class="title">Get inspired</h3>
+                    <p class="feature__text">Thousands of tested recipes with photos, step by step instructions and cooking time for every day and holiday.</p>
+                </article>
+                <article class="feature">
+                    <div class="feature__icon"><img src="images/icon2.svg" width="60" height="32" alt=""></div>
+                    <h3 class="title">Get rewarded</h3>
+                    <p class="feature__text">Share your own recipes with the community and earn bonus points for every new one. Points become gifts.</p>
+                </article>
+                <article class="feature">
+                    <div class="feature__icon"><img src="images/icon3.svg" width="60" height="60" alt=""></div>
+                    <h3 class="title">Get social</h3>
+                    <p class="feature__text">Follow your favorite cooks, leave reviews and ask questions right under the recipe. Cook together with friends!</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Блок: мобильное приложение -->
+        <section class="app" id="app">
+            <div class="app__inner container">
+                <img class="app__phone" src="images/phone.webp" width="560" height="778" alt="Fudi app on iPhone" loading="lazy">
+                <div class="app__info">
+                    <h2 class="title title--left">Introducing the Fudi app</h2>
+                    <p class="app__text">The <strong>Fudi app</strong> keeps all your favorite recipes in your pocket. Search by ingredients, cuisine or cooking time and save the dishes you want to try later.</p>
+                    <p class="app__text">Make a shopping list in one tap, switch on the step by step mode while cooking and set timers right from the recipe. The app works even without the internet, so your recipes are always at hand: in the kitchen, in the shop or in the country house.</p>
+                    <p class="app__text">Download the app for free and get new seasonal recipes from our cooks every week. The best recipes of our users get into the weekly top and win prizes.</p>
+                    <div class="app__stores">
+                        <a href="#appstore"><img src="images/appstore.webp" width="112" height="39" alt="Available on the App Store" loading="lazy"></a>
+                        <a href="#googleplay"><img src="images/googleplay.webp" width="120" height="39" alt="Android app on Google Play" loading="lazy"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок: отзыв -->
+        <section class="review">
+            <h2 class="visually-hidden">Reviews</h2>
+            <figure class="review__item container">
+                <img class="review__avatar" src="images/avatar.webp" width="106" height="106" alt="Michael Dawson" loading="lazy">
+                <blockquote class="review__quote">
+                    <p>“I am so happy because I found this recipe, and it just made my life easier. Thanks so much for sharing!”</p>
+                </blockquote>
+                <figcaption class="review__author">- Michael Dawson, San Francisco, CA -</figcaption>
+            </figure>
+            <div class="review__dots" aria-hidden="true">
+                <span class="review__dot review__dot--active"></span>
+                <span class="review__dot"></span>
+                <span class="review__dot"></span>
+            </div>
+        </section>
+
+        <!-- Блок: кухни -->
+        <section class="cuisines">
+            <h2 class="title">Browse by cuisines</h2>
+            <ul class="cuisines__list">
+                <li class="cuisine"><a class="cuisine__link" href="#italian"><img class="cuisine__img" src="images/italian.webp" width="320" height="225" alt="" loading="lazy"><span class="cuisine__count">327 Recipes</span> <span class="cuisine__name">Italian</span></a></li>
+                <li class="cuisine"><a class="cuisine__link" href="#indian"><img class="cuisine__img" src="images/indian.webp" width="320" height="225" alt="" loading="lazy"><span class="cuisine__count">856 Recipes</span> <span class="cuisine__name">Indian</span></a></li>
+                <li class="cuisine"><a class="cuisine__link" href="#french"><img class="cuisine__img" src="images/french.webp" width="320" height="225" alt="" loading="lazy"><span class="cuisine__count">27 Recipes</span> <span class="cuisine__name">French</span></a></li>
+                <li class="cuisine"><a class="cuisine__link" href="#steakhouse"><img class="cuisine__img" src="images/steakhouse.webp" width="320" height="225" alt="" loading="lazy"><span class="cuisine__count">174 Recipes</span> <span class="cuisine__name">Steakhouse</span></a></li>
+                <li class="cuisine"><a class="cuisine__link" href="#seafood"><img class="cuisine__img" src="images/seafood.webp" width="320" height="225" alt="" loading="lazy"><span class="cuisine__count">731 Recipes</span> <span class="cuisine__name">Seafood</span></a></li>
+                <li class="cuisine"><a class="cuisine__link" href="#sushi"><img class="cuisine__img" src="images/sushi.webp" width="320" height="225" alt="" loading="lazy"><span class="cuisine__count">237 Recipes</span> <span class="cuisine__name">Sushi</span></a></li>
+                <li class="cuisine"><a class="cuisine__link" href="#mexican"><img class="cuisine__img" src="images/mexican.webp" width="320" height="225" alt="" loading="lazy"><span class="cuisine__count">529 Recipes</span> <span class="cuisine__name">Mexican</span></a></li>
+                <li class="cuisine"><a class="cuisine__link" href="#chinese"><img class="cuisine__img" src="images/chinese.webp" width="320" height="225" alt="" loading="lazy"><span class="cuisine__count">145 Recipes</span> <span class="cuisine__name">Chinese</span></a></li>
+                <li class="cuisine"><a class="cuisine__link" href="#pizza"><img class="cuisine__img" src="images/pizza.webp" width="320" height="225" alt="" loading="lazy"><span class="cuisine__count">327 Recipes</span> <span class="cuisine__name">Pizza</span></a></li>
+                <li class="cuisine"><a class="cuisine__link" href="#american"><img class="cuisine__img" src="images/american.webp" width="320" height="225" alt="" loading="lazy"><span class="cuisine__count">1.437 Recipes</span> <span class="cuisine__name">American</span></a></li>
+            </ul>
+        </section>
+
+        <!-- Блок: цифры -->
+        <section class="stats">
+            <h2 class="visually-hidden">Fudi in numbers</h2>
+            <ul class="stats__list container">
+                <li class="stats__item"><strong class="stats__number">23,567</strong> <span class="stats__label">Recipes Available</span></li>
+                <li class="stats__item"><strong class="stats__number">431,729</strong> <span class="stats__label">Active Users</span></li>
+                <li class="stats__item"><strong class="stats__number">892,173</strong> <span class="stats__label">Positive Reviews</span></li>
+                <li class="stats__item"><strong class="stats__number">56,581</strong> <span class="stats__label">Photos &amp; Videos</span></li>
+                <li class="stats__item"><strong class="stats__number">3,182</strong> <span class="stats__label">Spices and Herbs</span></li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Блок: подвал -->
+    <footer class="footer">
+        <div class="footer__inner container">
+            <p class="footer__copy">©2014 Fudi. All Rights Reserved.</p>
+            <p class="footer__design">Design by: <a href="http://www.bekades.com" target="_blank" rel="noopener">www.bekades.com</a></p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,734 @@
+/* Шрифт Lato подключён локально (быстрее, чем через Google Fonts) */
+@font-face {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url("fonts/lato-100.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("fonts/lato-300.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Lato";
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url("fonts/lato-300i.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("fonts/lato-400.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("fonts/lato-700.woff2") format("woff2");
+}
+
+
+/* Общие стили */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font: 300 16px/26px "Lato", Arial, sans-serif;
+    color: #6b6b6b;
+    background: #fff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+/* Заголовок с красной чертой снизу */
+.title {
+    position: relative;
+    margin: 0;
+    padding-bottom: 7px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #111;
+}
+
+.title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 88px;
+    height: 1px;
+    margin-left: -44px;
+    background: #f57365;
+}
+
+.title--left {
+    text-align: left;
+}
+
+.title--left::after {
+    left: 0;
+    margin-left: 0;
+}
+
+
+/* Блок: главный экран */
+
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 880px;
+    overflow: hidden;
+    color: #fff;
+    background: #6b3f55;
+}
+
+.hero__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero__top {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 18px;
+}
+
+.logo {
+    margin-left: -2px;
+}
+
+.logo__img {
+    display: block;
+}
+
+.logo__letters {
+    font: 400 12.5px "Lato", Arial, sans-serif;
+    text-anchor: middle;
+    fill: #fff;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    padding-top: 27px;
+}
+
+.nav__link {
+    padding: 2px 0;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Кнопка 24x24 для удобного нажатия, сами полоски 14x10 */
+.nav__burger {
+    width: 24px;
+    height: 24px;
+    margin: -7px -5px -7px -3px;
+    padding: 7px 5px;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+/* Три полоски «бургера» */
+.nav__burger span {
+    display: block;
+    height: 2px;
+    background: #fff;
+    box-shadow: 0 4px 0 #fff, 0 8px 0 #fff;
+}
+
+.hero__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 266px;
+    text-align: center;
+}
+
+.hero__title {
+    margin: 0;
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 100px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.hero__subtitle {
+    display: block;
+    margin-bottom: 5px;
+    font: italic 700 36px/40px "Times New Roman", Times, serif;
+    letter-spacing: 1.5px;
+    text-transform: none;
+    color: #f0ebe4;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 283px;
+    height: 70px;
+    margin-top: 28px;
+    border: 2px solid #fff;
+    border-radius: 2px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.2s;
+}
+
+.button:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.hero__text {
+    margin: 34px 0 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+
+.hero__text a {
+    color: #fff;
+}
+
+
+/* Блок: преимущества */
+
+.features {
+    padding: 101px 0 97px;
+}
+
+.features__list {
+    display: flex;
+    gap: 50px;
+}
+
+.feature {
+    flex: 1;
+    text-align: center;
+}
+
+/* Круг вокруг иконки */
+.feature__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 107px;
+    height: 107px;
+    margin: 0 auto 14px;
+    border: 2px solid #221f1f;
+    border-radius: 50%;
+}
+
+.feature__icon img {
+    display: block;
+}
+
+.feature__text {
+    margin: 11px 0 0;
+    letter-spacing: 0.4px;
+}
+
+
+/* Блок: мобильное приложение */
+
+.app {
+    padding-top: 102px;
+    overflow: hidden;
+    background: #f7f7f7;
+}
+
+.app__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.app__phone {
+    display: block;
+    flex: 0 1 560px;
+    min-width: 0;
+    margin-left: -30px;
+}
+
+.app__info {
+    flex: 0 1 541px;
+    min-width: 0;
+    margin-left: 40px;
+    padding: 74px 0 60px;
+}
+
+.app__text {
+    margin: 26px 0 0;
+    letter-spacing: 0.4px;
+}
+
+.app__info .title + .app__text {
+    margin-top: 11px;
+}
+
+.app__stores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.app__stores img {
+    display: block;
+}
+
+
+/* Блок: отзыв */
+
+.review {
+    padding: 80px 0;
+    text-align: center;
+    color: #fff;
+    background: #4a3949 url("images/review.webp") center / cover no-repeat;
+}
+
+.review__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.review__avatar {
+    display: block;
+    border: 3px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+}
+
+.review__quote {
+    max-width: 900px;
+    margin: 15px 0 0;
+    font-size: 30px;
+    font-weight: 100;
+    line-height: 44px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.review__quote p {
+    margin: 0;
+}
+
+.review__author {
+    margin-top: 14px;
+    font-size: 18px;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.review__dots {
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 34px;
+}
+
+.review__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.review__dot--active {
+    background: #fff;
+}
+
+
+/* Блок: кухни */
+
+.cuisines {
+    padding-top: 93px;
+}
+
+.cuisines__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.cuisine {
+    flex: 0 0 20%;
+    min-width: 0;
+}
+
+.cuisine__link {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 320 / 225;
+    padding-bottom: 20px;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.cuisine__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.cuisine__link:hover .cuisine__img {
+    transform: scale(1.05);
+}
+
+/* Размер текста зависит от ширины экрана, чтобы название влезало в плитку */
+.cuisine__count {
+    position: relative;
+    font: italic 700 clamp(13px, 1.07vw, 17px) / 1.3 "Times New Roman", Times, serif;
+}
+
+.cuisine__name {
+    position: relative;
+    font-size: clamp(18px, 2.4vw, 38px);
+    font-weight: 700;
+    line-height: 1.16;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+/* Блок: цифры */
+
+.stats {
+    padding: 49px 0 56px;
+}
+
+.stats__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stats__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stats__number {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 2px;
+    color: #111;
+}
+
+.stats__label {
+    margin-top: 3px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+}
+
+
+/* Блок: подвал */
+
+.footer {
+    border-top: 1px solid #e2e2e2;
+    background: #f7f7f7;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 92px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.footer__copy {
+    margin: 0;
+}
+
+.footer__design {
+    margin: 0;
+    letter-spacing: 2.7px;
+    text-transform: uppercase;
+}
+
+.footer__design a {
+    font-weight: 400;
+    text-decoration: none;
+    color: #111;
+}
+
+
+/* Планшет (до 1023px) */
+@media (max-width: 1023px) {
+    .hero {
+        height: 640px;
+    }
+
+    .hero__content {
+        padding-top: 150px;
+    }
+
+    .hero__title {
+        font-size: 72px;
+        line-height: 76px;
+        letter-spacing: 4px;
+    }
+
+    .hero__subtitle {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    .features {
+        padding: 70px 0;
+    }
+
+    .features__list {
+        gap: 30px;
+    }
+
+    .app {
+        padding-top: 60px;
+    }
+
+    .app__phone {
+        flex-basis: 45%;
+        align-self: flex-end;
+        margin-left: 0;
+    }
+
+    .app__info {
+        flex-basis: 55%;
+        padding: 0 0 50px;
+    }
+
+    .review {
+        padding: 60px 0;
+    }
+
+    .review__quote {
+        font-size: 26px;
+        line-height: 38px;
+    }
+
+    .cuisines {
+        padding-top: 70px;
+    }
+
+    .stats__number {
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: 1px;
+    }
+
+    .stats__label {
+        font-size: 14px;
+    }
+}
+
+
+/* Телефон (до 767px) */
+@media (max-width: 767px) {
+    .hero {
+        height: 560px;
+    }
+
+    .hero__top {
+        align-items: center;
+        padding-top: 15px;
+    }
+
+    .logo__img {
+        width: 55px;
+        height: auto;
+    }
+
+    .nav {
+        gap: 20px;
+        padding-top: 0;
+    }
+
+    .hero__content {
+        padding-top: 110px;
+    }
+
+    .hero__title {
+        font-size: 48px;
+        line-height: 54px;
+        letter-spacing: 3px;
+    }
+
+    .hero__subtitle {
+        margin-bottom: 0;
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: 1px;
+    }
+
+    .button {
+        width: 220px;
+        height: 56px;
+        font-size: 16px;
+    }
+
+    .hero__text {
+        margin-top: 26px;
+        font-size: 13px;
+    }
+
+    .features {
+        padding: 50px 0;
+    }
+
+    .features__list {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .feature__text {
+        max-width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .app {
+        padding-top: 50px;
+    }
+
+    .app__inner {
+        flex-direction: column;
+    }
+
+    /* На телефоне сначала текст, под ним телефон */
+    .app__info {
+        order: -1;
+        margin-left: 0;
+        padding-bottom: 40px;
+    }
+
+    .app__phone {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .review {
+        padding: 50px 0;
+    }
+
+    .review__quote {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    .cuisines {
+        padding-top: 50px;
+    }
+
+    .cuisines__list {
+        margin-top: 30px;
+    }
+
+    .cuisine {
+        flex-basis: 50%;
+    }
+
+    .stats {
+        padding: 40px 0;
+    }
+
+    .stats__list {
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 24px;
+    }
+
+    .stats__item {
+        flex: 0 0 50%;
+    }
+
+    .footer__inner {
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
+        padding: 24px 20px;
+        text-align: center;
+    }
+
+    .footer__design {
+        letter-spacing: 2px;
+    }
+}
